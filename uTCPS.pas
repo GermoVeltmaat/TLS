@@ -85,7 +85,8 @@ uses uLog, Platform;
 
 function RandomSource (data : pointer; output : PChar; len : size_t) : integer; cdecl;
 var            // entropy source based on random ()
-  x, i, r : integer;
+  i, r : integer;
+  x : int64;
 begin
   Log ('RANDOM SOURCE - length ' + len.ToString);
   i := 0;
